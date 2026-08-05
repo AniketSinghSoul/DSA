@@ -2,6 +2,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Array {
+
     public static void main(String[] args) {
         Scanner obj = new Scanner((System.in));
         int n = 5;
@@ -22,6 +23,7 @@ public class Array {
          {
              System.out.println(marks[i]+"");
          }
+         float average =0;
          int max=marks[0];
          int min= marks[0];
          for(int i=1;i<n;i++)
@@ -38,6 +40,15 @@ public class Array {
         System.out.println("Highest marks :"+ max);
         System.out.println("lowest marks : "+ min);
        // System.out.println(Arrays.toString(marks));
+        long sum =0;
+        for(int i = 0;i<n;i++)
+        sum= sum +marks[i];
+        {
+            System.out.println("Sum :" +sum);
+        }
+        double avg = (double)sum/n;
+
+        System.out.println("avreage marks:" +avg);
     }
 }
 
