@@ -15,42 +15,49 @@ public class Array {
         marks[3] = 60;
         marks[4] = 40;
        */
-         for(int i=0;i<n;i++)
-         {
-             marks[i]=obj.nextInt();
-         }
-         for(int i =0;i<n;i++)
-         {
-             System.out.println(marks[i]+"");
-         }
-         float average =0;
-         int max=marks[0];
-         int min= marks[0];
-         for(int i=1;i<n;i++)
-         {
-             if(marks[i] > max)
-             {
-                 max= marks[i];
-             }
-             else
-             {
-                 min=marks[i];
-             }
-         }
-        System.out.println("Highest marks :"+ max);
-        System.out.println("lowest marks : "+ min);
-       // System.out.println(Arrays.toString(marks));
-        long sum =0;
-        for(int i = 0;i<n;i++)
-        sum= sum +marks[i];
-        {
-            System.out.println("Sum :" +sum);
+        for (int i = 0; i < n; i++) {
+            marks[i] = obj.nextInt();
         }
-        double avg = (double)sum/n;
+        for (int i = 0; i < n; i++) {
+            System.out.println(marks[i] + "");
+        }
+        float average = 0;
+        int max = marks[0];
+        int min = marks[0];
+        for (int i = 1; i < n; i++) {
+            if (marks[i] > max) {
+                max = marks[i];
+            } else {
+                min = marks[i];
+            }
+        }
+        System.out.println("Highest marks :" + max);
+        System.out.println("lowest marks : " + min);
+        // System.out.println(Arrays.toString(marks));
+        long sum = 0;
+        for (int i = 0; i < n; i++)
+            sum = sum + marks[i];
+        {
+            System.out.println("Sum :" + sum);
+        }
+        double avg = (double) sum / n;
 
-        System.out.println("avreage marks:" +avg);
+        System.out.println("avreage marks:" + avg);
+
+        int num = 100;
+        boolean found = false;
+        for (int i = 0; i < n; i++) {
+            if(marks[i]==num)
+            {
+                found= true;
+                break;
+            }
+        }
+        if(found==true)
+            System.out.println("found");
+        else System.out.println("not found");
+        Arrays.sort(marks);
     }
 }
-
 
 
